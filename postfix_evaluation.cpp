@@ -13,7 +13,7 @@ int main()
 	char arrstring[arrsize],copyarrstring[arrsize];
 	do
 	{
-		cout<<"\n\n\n enter your choice \n 1.Accept expression \n 2.Display infix expresion \n 3.Display postfix expression \n 4.convert infix to postfix. \n 0.exit.";
+		cout<<"\n\n\n enter your choice \n 1.Accept expression \n 2.Display infix expresion \n 3.Display postfix expression \n 4.Evaluate postfix expression. \n 0.exit.";
 		cin>>c;
 		switch(c)
 		{
