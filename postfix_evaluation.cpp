@@ -68,7 +68,54 @@ int main()
 		}
 
 void evaluate(char *copyarrstring){
+     int outputstack[20],x,y,eval;
+    int i=0,topoutputstack=-1;
+    while(copyarrstring[i]!='\0')
+    {
+       if((int)copyarrstring[i]=='*'||(int)copyarrstring[i]=='/'||(int)copyarrstring[i]=='+'||(int)copyarrstring[i]=='-')
+        {
+            y=pop(outputstack,topoutputstack);
+            topoutputstack--;
+            x=pop(outputstack,topoutputstack);
+            topoutputstack--;
+            cout<<"\n ascii value of cpy ar[i]"<<(int)copyarrstring[i]<<"x="<<x<<"y:"<<y;
+            switch(copyarrstring[i])
+                {
+                    case '*':{
+                        eval=x*y;
+                        break;
 
+
+                    }
+                    case '/':{
+                        eval=x/y;
+                         break;
+
+
+                    }
+                    case '+':{
+                        eval=x+y;
+                         break;
+
+                    }
+                    case '-':{
+                        eval=x-y;
+                         break;
+
+                    }
+                }
+                topoutputstack=push(outputstack,topoutputstack,eval);
+                i++;
+        }
+        else
+        {
+             int x=(int)copyarrstring[i]-48;
+             topoutputstack=push(outputstack,topoutputstack,x);
+             i++;
+               }
+
+    }
+        cout<<"\n answers is :"<<outputstack[0];
 }
 
 
