@@ -78,7 +78,6 @@ void evaluate(char *copyarrstring){
             topoutputstack--;
             x=pop(outputstack,topoutputstack);
             topoutputstack--;
-            cout<<"\n ascii value of cpy ar[i]"<<(int)copyarrstring[i]<<"x="<<x<<"y:"<<y;
             switch(copyarrstring[i])
                 {
                     case '*':{
